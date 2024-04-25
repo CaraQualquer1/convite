@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Fernanda</title>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/grid-layout.css">
+        <link rel="stylesheet" href="./css/convite.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="quadrado">
+            <h1 class="titulo">Bora sair?</h1>
+            <div class="buttons">
+                <button type="button" class="btn btn-outline-success">Sim</button>
+                <button type="button" class="btn btn-outline-dark">Não</button>
+            </div>
+        </div>
+        <script>
+            var moveButton = document.querySelector(".btn.btn-outline-dark");
+            var correctlyButton = document.querySelector(".btn.btn-outline-success");
+
+            moveButton.addEventListener("click", function(){
+                var vertical = Math.floor(Math.random() * 400);
+                var horizontal = Math.floor(Math.random() * 400);
+                moveButton.style.position = "absolute";
+                moveButton.style.left = horizontal + "px";
+                moveButton.style.top = vertical + "px";
+            });
+
+            correctlyButton.addEventListener("click", function(){
+                alert("Resposta Certa! Vamos marcar");
+            });
+        </script>
+    </body>
+</html>
